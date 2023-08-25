@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     .container{
+        position: relative;
+     }
+     .toggleButton{
+        position: absolute;
+        transform: translateY(-50%);
+     }
+    </style>
+</head>
+<body>
+    <table class="container">
+  
+            <tr>
+                <td><label for="">Please Enter Enything</label></td>
+                
+            </tr>
+            <tr>
+                <td><input id="passwordInput" type="password" placeholder="enter the anything else"></td>
+            </tr>
+            <tr>
+                <td> <button id="toggleButton">Show</button> </td>
+
+            </tr>
+     
+    </table>
+
+    <script>
+        let passwordInput = document.getElementById("passwordInput");
+    let toggleButton = document.getElementById("toggleButton");
+    
+    toggleButton.addEventListener("click", function () {
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleButton.textContent = "Hide";
+      } else {
+        passwordInput.type = "password";
+       
+
+        toggleButton.textContent = "Show";
+      }
+    });
+    
+      </script>
+</body>
+</html>

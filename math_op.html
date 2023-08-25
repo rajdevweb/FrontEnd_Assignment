@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td><label for="firstNumber">Enter first number:</label>
+                <input type="number" id="firstNumber" placeholder="First number">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label for="secondNumber">Enter second number:</label>
+                <input type="number" id="secondNumber" placeholder="Second number">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Choose operation:</label>
+                <tr>
+                    <td>
+                <input type="checkbox" name="operation" value="add"> Addition
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="operation" value="sub"> Subtraction
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                <input type="checkbox" name="operation" value="mul"> Multiplication
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="operation" value="div"> Division
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" name="operation" value="mod"> Modulus
+
+                    </td>
+                </tr>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+<button id="calculate">Calculate</button>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td><div id="result"></div></td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+<script>
+const calculateButton = document.getElementById("calculate");
+
+calculateButton.addEventListener("click", function() {
+  const firstNumber = parseFloat(document.getElementById("firstNumber").value);
+  const secondNumber = parseFloat(document.getElementById("secondNumber").value);
+  const selectedOperation = document.querySelector('input[name="operation"]:checked').value;
+  const resultDiv = document.getElementById("result");
+
+  if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+    let result;
+
+    switch (selectedOperation) {
+      case "add":
+        result = firstNumber + secondNumber;
+        break;
+      case "sub":
+        result = firstNumber - secondNumber;
+        break;
+      case "mul":
+        result = firstNumber * secondNumber;
+        break;
+      case "div":
+        result = firstNumber / secondNumber;
+        break;
+      case "mod":
+        result = firstNumber % secondNumber;
+        break;
+    }
+
+    resultDiv.textContent = `Result: ${result}`;
+  } else {
+    resultDiv.textContent = "Invalid input";
+  }
+});
+</script>
