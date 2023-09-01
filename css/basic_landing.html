@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .top-wrapper {
+            text-align: center;
+            background-color: #fc6999;
+            color: white;
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .image-container {
+            width: 100%;
+            height: 100vh;
+            /* Set the desired height of your container */
+            background-image: url(image/img-6.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .header-wrapper h1 {
+
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            color: white;
+        }
+
+        .href {
+            display: block;
+            text-align: center;
+            background-color: #e08f27;
+            padding: 4px;
+            border-radius: 3px;
+            color: white;
+            font-size: 19px;
+            text-decoration: none;
+            border: 1px solid black;
+            transition: 0.3s ease-in;
+
+        }
+
+        .href:hover {
+            padding: 10px;
+            background-color: #223f56;
+        }
+
+        table,
+        tr,
+        th,
+        td {
+            border: 2px solid black;
+            border-collapse: collapse;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-wrapper">
+        <h5>Contact-Us-Page</h5>
+    </div>
+    <div class="image-container">
+        <div class="header-wrapper">
+            <h1>CONTACT US.............</h1>
+            <a class="href" href="#">Enter</a>
+        </div>
+    </div>
+
+
+    <table style="width:100%">
+        <tr>
+            <th colspan="3">HTML BASIC FORM</th>
+
+        </tr>
+        <tr>
+            <td style="padding: 10px;">
+                <label for="text">FirstName</label>
+                <input type="text">
+            </td>
+            <td style="padding: 10px;">
+                <label for="text">LastName</label>
+                <input type="text">
+            </td>
+
+        </tr>
+        <tr>
+            <td style="padding: 10px;">
+                <label for="text">Email ID:</label>
+                <input type="text">
+            </td>
+            <td style="padding: 10px;">
+                <label for="text">Phone No</label>
+                <input type="number">
+            </td>
+
+        </tr>
+        <tr>
+            <td style="padding: 10px;">
+                <label for="city">City</label>
+                <select name="city" id="city">
+                    <option value="Ahmedabad">Ahmedabad</option>
+                    <option value="Surat">Surat</option>
+                    <option value="Mahesana">Mahesana</option>
+                    <option value="div-dhaman">div-dhaman</option>
+                    <option value="kheda">kheda</option>
+                </select>
+
+            </td>
+            <td style="padding: 10px;">
+                <label for="text">Gender : </label>
+                <label for="male">Male</label>
+                <input type="radio" name="gender">
+                <label for="female">FEMALE</label>
+                <input type="radio" name="gender" id="">
+
+            </td>
+
+        </tr>
+    </table>
+
+    <div style="height: -100vh;"></div>
+</body>
+
+</html>
